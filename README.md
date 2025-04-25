@@ -1,3 +1,3 @@
 # Video Compressor
 
-pyinstaller -F -w -i "appicon.png" --name "Video Compreesor" ffmpeg_compressor.py
+pyinstaller -F -w -i "appicon.png" --name "Video Compressor" ffmpeg_compressor.py

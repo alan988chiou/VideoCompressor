@@ -15,7 +15,7 @@ from icon import img
 class FFmpegCompressorApp:
     def __init__(self, root):
         self.root = root
-        self.root.title("FFmpeg Video Compressor")
+        self.root.title("Video Compressor")
         self.root.resizable(False, False)
         self.root.grid_columnconfigure(1, weight=1)
 

@@ -1,0 +1,8 @@
+Mac/__pycache__/*
+SunCleanBots_Log/*
+Mac/build/*
+Mac/dist/*
+*.spec
+Windows/__pycache__/*
+WindowsMac/build/*
+Windows/dist/*

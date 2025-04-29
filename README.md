@@ -72,12 +72,27 @@ This program requires the following:
    - End Time: `00:02:00`
    - Click "Compress" to generate a 1-minute clip of `movie.mp4` at 1.5x speed, saved as `/path/to/output/movie_compressed.mp4`.
 
-## Package
-- **macOS**: 
+## Building the Program with PyInstaller
+You can use PyInstaller to package the `ffmpeg_compressor.py` script into a standalone executable file, so users don't need to install Python or dependencies to run the program. Follow the steps below:
+
+### 1. Install PyInstaller
+First, ensure you have PyInstaller installed. You can install it using pip:
+```bash
+pip install pyinstaller
+```
+Verify the installation by running:
+```bash
+pyinstaller --version
+```
+
+### 2. Package the Program
+Navigate to the directory containing `ffmpeg_compressor.py` and run the following command to package the program into a single executable file:
+
+#### For macOS: 
 ```sh
 pyinstaller -F -i "appicon.icns" --name "Video Compressor" ffmpeg_compressor.py
 ```
-- **Windows**: 
+#### For Windows: 
 ```sh
 python3 gen_icon.py
 pyinstaller -F -w -i "appicon.ico" --name "Video Compressor" ffmpeg_compressor.py
@@ -88,6 +103,11 @@ pyinstaller -F -w -i "appicon.ico" --name "Video Compressor" ffmpeg_compressor.p
 - **Time Format**: Start and end times must be in `HH:MM:SS` format (e.g., `00:01:30` for 1 minute 30 seconds).
 - **Video Duration**: If FFmpeg's `ffprobe` is available, the program will calculate the video duration for accurate progress tracking. If `ffprobe` is missing, the progress bar may not work.
 - **H.264 Patent**: This program uses `libx264` (H.264 encoding), which may be subject to patent licensing in some regions (e.g., the USA). For non-commercial use, this is typically not an issue, but please verify local regulations.
+
+## License
+This program is licensed under the **GNU General Public License (GPL) version 3** (or later) due to its dependency on FFmpeg, which is GPL-licensed when using components like `libx264`. For details, see the [LICENSE](LICENSE) file.
+
+If you modify or distribute this program, you must make your source code available under the GPL. FFmpeg's source code and license details are available at: [https://ffmpeg.org](https://ffmpeg.org).
 
 ## Dependencies
 - **Python 3.8+**: For running the program.
